@@ -21,7 +21,7 @@ public class Reel {
     @Column(nullable = false, length = 3)
     private Integer weight;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+    @ManyToMany(cascade = {CascadeType.ALL})
     private Set<Brand> brands;
 
     @Enumerated(EnumType.STRING)

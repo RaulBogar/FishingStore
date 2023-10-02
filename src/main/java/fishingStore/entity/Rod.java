@@ -28,7 +28,7 @@ public class Rod {
     @Column(nullable = false, length = 2)
     private Integer maxDrag;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+    @ManyToMany(cascade = {CascadeType.ALL})
     private Set<Brand> brands;
 
     @Enumerated(EnumType.STRING)
